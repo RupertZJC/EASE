@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "n_evaluation": 10,
+  "temperature": 1.0,
+  "deltas": [
+    2.0
+  ],
+  "prompt_excluded_from_saved_output": true,
+  "np_input_truncation": false
+}

@@ -1,0 +1,10 @@
+# Core library versions used for the ten-example CUDA smoke run.
+# Install a matching CUDA PyTorch build before applying these constraints.
+torch==2.6.0
+transformers==5.8.1
+datasets==4.8.5
+numpy==2.2.6
+accelerate==1.13.0
+tokenizers==0.22.2
+huggingface_hub==1.18.0
+safetensors==0.7.0

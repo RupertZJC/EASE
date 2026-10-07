@@ -1,0 +1,15 @@
+torch
+transformers>=4.41
+accelerate
+datasets
+tokenizers
+huggingface_hub
+numpy
+scikit-learn
+tqdm
+nltk
+sentencepiece
+protobuf
+regex
+clean-text
+safetensors

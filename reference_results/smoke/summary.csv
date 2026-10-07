@@ -1,0 +1,4 @@
+method,display_name,roberta_base_auroc,roberta_base_tpr_at_1pct_fpr
+np,Qwen3-8B,0.94,1.0
+ease_plugin,EASE-plugin (delta=2),0.96,1.0
+ease_rewrite_d2,EASE-Rewrite (delta=2),0.9,0.9

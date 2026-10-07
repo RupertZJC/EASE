@@ -1,0 +1,8 @@
+EASE
+Copyright 2026 EASE contributors
+
+The adversarial paraphrasing implementation in src/ease/paraphrase.py is
+adapted from chengez/Adversarial-Paraphrasing, which is distributed under the
+Apache License 2.0. Changes include Qwen3 integration, fixed experiment
+profiles, option-2-only guidance, resumable corpus generation and explicit
+output-only detector evaluation.

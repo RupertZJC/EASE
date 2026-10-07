@@ -1,0 +1,1 @@
+"""Cross-detector generalization experiment."""

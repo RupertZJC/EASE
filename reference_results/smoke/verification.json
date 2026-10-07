@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "detectors": [
+    "roberta_base"
+  ],
+  "methods": [
+    "np",
+    "ease_plugin",
+    "ease_rewrite_d2"
+  ],
+  "comparisons": 3,
+  "target_fpr": 0.01,
+  "max_auroc_abs_error": 0.0,
+  "max_tpr_abs_error": 0.0,
+  "max_threshold_abs_error": 0.0
+}

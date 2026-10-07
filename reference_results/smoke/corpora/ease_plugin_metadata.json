@@ -1,0 +1,9 @@
+{
+  "count": 10,
+  "token_count_min": 200,
+  "token_count_max": 200,
+  "token_count_mean": 200.0,
+  "empty": 0,
+  "source_identity_fallback_count": 0,
+  "source_identity_fallback_indices": []
+}

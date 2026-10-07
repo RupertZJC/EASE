@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "experiment": "qwen3_8b_competitor_reproduction",
+  "generator": "Qwen/Qwen3-8B",
+  "data_source": "Salesforce/wikitext:wikitext-103-raw-v1:train",
+  "n_calibration": 10,
+  "n_evaluation": 10,
+  "prompt_tokens": 30,
+  "continuation_tokens": 200,
+  "seed": 20260909,
+  "ease_plugin": {
+    "temperature": 1.0,
+    "top_k": 20,
+    "delta_np": 0.0,
+    "delta_ease": 2.0
+  },
+  "adversarial_paraphrasing": {
+    "model": "Qwen/Qwen3-8B",
+    "plain_temperature": 0.6,
+    "adversarial_temperature": 1.0,
+    "top_p": 0.99,
+    "top_k": 50,
+    "max_new_tokens": 200,
+    "min_new_tokens": 1,
+    "empty_output_policy": "source_identity_fallback",
+    "thinking": false,
+    "adversarial_ranking": "fixed option=2 semantics",
+    "simple": "one unguided pass",
+    "recursive": "two unguided passes",
+    "adv_base": "one pass guided by RoBERTa-base",
+    "adv_large": "one pass guided by RoBERTa-large"
+  },
+  "corpora": [
+    "np",
+    "ease_plugin",
+    "simple",
+    "recursive",
+    "adv_base",
+    "adv_large"
+  ]
+}

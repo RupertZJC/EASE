@@ -1,0 +1,60 @@
+{
+  "metric": "AUROC and fixed-threshold TPR@1%FPR",
+  "target_fpr": 0.01,
+  "score_direction": "higher_is_more_machine_like",
+  "smoke": true,
+  "detectors": [
+    "roberta_base"
+  ],
+  "models": {
+    "roberta_base": "openai-community/roberta-base-openai-detector",
+    "roberta_large": "openai-community/roberta-large-openai-detector",
+    "mage": "yaful/MAGE",
+    "radar": "TrustSafeAI/RADAR-Vicuna-7B",
+    "fast_sampling": "EleutherAI/gpt-j-6B",
+    "fast_scoring": "EleutherAI/gpt-neo-2.7B"
+  },
+  "thresholds": {
+    "roberta_base": {
+      "threshold": 0.0003155449230689556,
+      "target_fpr": 0.01,
+      "calibration_fpr": 0.0,
+      "heldout_human_fpr": 0.2
+    }
+  },
+  "methods": {
+    "np": {
+      "display_name": "Qwen3-8B",
+      "detectors": {
+        "roberta_base": {
+          "auroc": 0.94,
+          "tpr_at_1pct_fpr": 1.0,
+          "n_human": 10,
+          "n_machine": 10
+        }
+      }
+    },
+    "ease_plugin": {
+      "display_name": "EASE-plugin (delta=2)",
+      "detectors": {
+        "roberta_base": {
+          "auroc": 0.96,
+          "tpr_at_1pct_fpr": 1.0,
+          "n_human": 10,
+          "n_machine": 10
+        }
+      }
+    },
+    "ease_rewrite_d2": {
+      "display_name": "EASE-Rewrite (delta=2)",
+      "detectors": {
+        "roberta_base": {
+          "auroc": 0.9,
+          "tpr_at_1pct_fpr": 0.9,
+          "n_human": 10,
+          "n_machine": 10
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "count": 10,
+  "delta": 2.0,
+  "input_token_count": {
+    "min": 317,
+    "max": 318,
+    "mean": 317.1
+  },
+  "output_token_count": {
+    "min": 79,
+    "max": 200,
+    "mean": 139.5
+  },
+  "identity_fallback_indices": [],
+  "chunk_seeds": [
+    2874179210
+  ]
+}
