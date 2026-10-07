@@ -1,10 +1,26 @@
 # EASE: Entropy-Adaptive Distribution Shaping
 
-EASE is a training-free decoding method that reshapes next-token probabilities
-according to their entropy. This repository provides generation-time EASE,
-EASE rewriting, comparison methods, and detector evaluation.
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-## Setup
+> **EASE** is a training-free decoding method that reshapes next-token
+> probabilities according to their entropy.
+
+This repository provides generation-time EASE, EASE rewriting, comparison
+methods, and detector evaluation.
+
+## 🧠 Method overview
+
+<p align="center">
+  <a href="fig/ease_overview.pdf">
+    <img src="fig/ease_overview.png" alt="EASE overview: entropy-adaptive control, token-dependent logit modulation, and adaptive distribution shaping during text generation." width="1000">
+  </a>
+</p>
+
+EASE uses decoding entropy to scale token-dependent logit offsets and adjust
+sampling temperature. The same sampler supports direct generation and rewriting.
+[View the vector PDF](fig/ease_overview.pdf).
+
+## 📦 Setup
 
 Use Python 3.10+ and a CUDA-compatible PyTorch build. From the repository root:
 
@@ -24,7 +40,7 @@ For the tested smoke environment, install with
 installing PyTorch 2.6.0 with CUDA 12.4. This profile covers the quick check below;
 Fast-DetectGPT has a separate compatibility limitation in the validation notes.
 
-## Quick check
+## 🚀 Quick check
 
 Code checks do not download checkpoints:
 
@@ -45,7 +61,7 @@ verifies the saved metrics. Results are in `summary.csv`, `summary.json`, and
 `verification.json`. Interrupted generation and scoring resume from saved chunks.
 The ten-example run checks the pipeline; its metrics are not paper results.
 
-## Experiments
+## 🧪 Experiments
 
 ```bash
 bash scripts/run_table1.sh runs/table1
@@ -76,14 +92,14 @@ on a separate human-only set, held fixed across methods, with conservative tie
 handling. Only final output text is scored. PPL is the mean per-text perplexity
 under Qwen3-8B. See [validation status](docs/VALIDATION.md) for tested coverage.
 
-## Code
+## 🗂️ Code
 
 - [`src/ease/sampling.py`](src/ease/sampling.py): shared EASE distribution.
 - `src/ease/`: configuration, metrics, paraphrasing, and detector components.
 - `experiments/`: resumable generation, scoring, and independent verification.
 - `scripts/`: smoke and full-run entry points.
 
-## License and attribution
+## 📄 License and attribution
 
 Apache 2.0. Adversarial paraphrasing is adapted from
 [Adversarial-Paraphrasing](https://github.com/chengez/Adversarial-Paraphrasing).
