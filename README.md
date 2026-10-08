@@ -9,10 +9,6 @@
 This repository provides generation-time EASE, EASE rewriting, comparison
 methods, and detector evaluation.
 
-**Authors:** Jicheng Zhou, Kahim Wong, Jialong Wang, and Jiantao Zhou.
-
-**Paper:** [arXiv:2610.09976](https://arxiv.org/abs/2610.09976) · [PDF](https://arxiv.org/pdf/2610.09976)
-
 ## 🧠 Method overview
 
 <p align="center">
