@@ -1,5 +1,6 @@
 # EASE: Entropy-Adaptive Distribution Shaping for Evading AI-generated Text Detectors
 
+[![arXiv](https://img.shields.io/badge/arXiv-2610.09976-b31b1b.svg)](https://arxiv.org/abs/2610.09976)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 > **EASE** is a training-free decoding method that reshapes next-token
@@ -7,6 +8,10 @@
 
 This repository provides generation-time EASE, EASE rewriting, comparison
 methods, and detector evaluation.
+
+**Authors:** Jicheng Zhou, Kahim Wong, Jialong Wang, and Jiantao Zhou.
+
+**Paper:** [arXiv:2610.09976](https://arxiv.org/abs/2610.09976) · [PDF](https://arxiv.org/pdf/2610.09976)
 
 ## 🧠 Method overview
 
@@ -98,6 +103,22 @@ under Qwen3-8B. See [validation status](docs/VALIDATION.md) for tested coverage.
 - `src/ease/`: configuration, metrics, paraphrasing, and detector components.
 - `experiments/`: resumable generation, scoring, and independent verification.
 - `scripts/`: smoke and full-run entry points.
+
+## 📚 Citation
+
+If you use EASE in your research, please cite our paper:
+
+```bibtex
+@misc{zhou2026easeentropyadaptivedistributionshaping,
+  title={EASE: Entropy-Adaptive Distribution Shaping for Evading AI-generated Text Detectors},
+  author={Jicheng Zhou and Kahim Wong and Jialong Wang and Jiantao Zhou},
+  year={2026},
+  eprint={2610.09976},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2610.09976},
+}
+```
 
 ## 📄 License and attribution
 
